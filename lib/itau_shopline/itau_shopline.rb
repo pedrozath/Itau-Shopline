@@ -97,16 +97,6 @@ class ItauShopline
     end
   
     def config
-      # load file if is not loaded yet
-      @@config ||= YAML.load_file(Rails.root.join("config/itau_shopline.yml"))
-
-      # raise an exception if the environment hasn't been set
-      # or if file is empty
-      if @@config == false || !@@config[Rails.env]
-        raise MissingEnvironmentError, ":#{Rails.env} environment not set on #{config_file.inspect}"
-      end
-
-      # retrieve the environment settings
-      @@config[Rails.env]
-    end # Load configuration file.
+      {'codigo_empresa' => ENV["ITAU_ENTERPRISE"], 'chave' => ENV["ITAU_KEY"]}
+    end
 end
