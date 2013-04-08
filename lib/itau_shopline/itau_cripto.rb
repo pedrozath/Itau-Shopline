@@ -78,7 +78,23 @@ class ItauCripto
     param_string[16] = preenche_branco(param_string[16], 60)
     param_string[17] = preenche_branco(param_string[17], 60)
 
-    str1 = algoritmo(param_string[1] + param_string[2] + param_string[3] + param_string[4] + param_string[6] + param_string[7] + param_string[8] + param_string[9] + param_string[10] + param_string[11] + param_string[12] + param_string[13] + param_string[14] + param_string[15] + param_string[16] + param_string[17], param_string[4])
+    str1 = algoritmo(param_string[1] + 
+      param_string[2] + 
+      param_string[3] + 
+
+      param_string[5] + 
+      param_string[6] + 
+      param_string[7] + 
+      param_string[8] + 
+      param_string[9] + 
+      param_string[10] + 
+      param_string[11] + 
+      param_string[12] + 
+      param_string[13] + 
+      param_string[14] + 
+      param_string[15] + 
+      param_string[16] + 
+      param_string[17], param_string[4])
     str2 = algoritmo(param_string[0] + str1, CHAVE_ITAU)
     
     converte(str2)
